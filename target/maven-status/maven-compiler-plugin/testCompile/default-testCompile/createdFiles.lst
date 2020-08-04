@@ -1,8 +1,0 @@
-com/g7s/ics/testcase/ListManagement/CustomerListTest.class
-com/g7s/ics/utils/FakerUtils.class
-com/g7s/ics/testcase/ListManagement/LogTest.class
-com/g7s/ics/testcase/ListManagement/VechicleListTest.class
-com/g7s/ics/utils/HMACSHA1EncoderUtil.class
-com/g7s/ics/com/g7s/ics/api/ReportDayFinanceApi.class
-com/g7s/ics/testcase/ReportDayFinance/ReportDayFinanceTest.class
-com/g7s/ics/com/g7s/ics/api/ListManagementApi.class

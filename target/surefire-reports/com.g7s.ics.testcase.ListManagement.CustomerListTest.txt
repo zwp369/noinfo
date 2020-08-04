@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.g7s.ics.testcase.ListManagement.CustomerListTest
--------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.763 s - in com.g7s.ics.testcase.ListManagement.CustomerListTest

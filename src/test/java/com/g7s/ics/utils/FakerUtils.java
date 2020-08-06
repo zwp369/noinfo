@@ -80,4 +80,32 @@ public class FakerUtils {
         }
         return sign;
     }
+
+
+    // 清理数据库,通过输入sql来执行
+//    public  void cleanMysqlData(String sql){
+//        Class.forName("com.mysql.cj.jdbc.Driver");
+//        String url = "jdbc:mysql://localhost:3306/how2java?characterEncoding=UTF-8";
+//        String username = "root";
+//        String password = "12345678";
+//        Connection conn = null;
+//        Statement st =null;
+//        try{
+//            conn = DriverManager.getConnection(url,username,password);
+//            st = conn.createStatement();
+//            st.execute(sql);
+//        }
+//        catch (SQLException e ){e.printStackTrace();}
+//        finally {
+//            try {
+//                if(st!=null){st.close();}
+//                if (conn!=null){conn.close();}
+//            }catch (SQLException e){e.printStackTrace();}
+//        }
+
+
+
+
+
+
 }

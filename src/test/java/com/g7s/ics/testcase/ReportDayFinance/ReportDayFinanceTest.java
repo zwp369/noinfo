@@ -2,10 +2,10 @@ package com.g7s.ics.testcase.ReportDayFinance;
 
 
 
-import com.g7s.ics.com.g7s.ics.api.ReportDayFinanceApi;
+import com.g7s.ics.api.ReportDayFinanceApi;
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
-import io.qameta.allure.Description;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

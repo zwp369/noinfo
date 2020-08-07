@@ -1,15 +1,17 @@
 package com.g7s.ics.testcase.ListManagement;
 
-import com.g7s.ics.com.g7s.ics.api.ListManagementApi;
+import com.g7s.ics.api.ListManagementApi;
 import com.g7s.ics.utils.FakerUtils;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
+import org.slf4j.Logger;
 
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -26,6 +28,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Epic("名单管理-测试用例")
 @Feature("车辆名单管理")
 public class VechicleListTest {
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(com.g7s.ics.testcase.ListManagement.VechicleListTest.class);
     ResourceBundle bundle =ResourceBundle.getBundle("Interface/ListInterface");
     String createVechiclePaht = bundle.getString("createVechiclePaht");
     String updateVechiclePaht = bundle.getString("updateVechiclePaht");
@@ -36,6 +39,15 @@ public class VechicleListTest {
 
 
 
+    @AfterAll
+    public static void cleanForSQL(){
+        String sqlVehicle ="DELETE  FROM ics_blacklist_vehicle WHERE create_username='zwp别名'";
+        String sqlCustomer ="DELETE  FROM ics_blacklist_customer WHERE create_username='zwp别名'";
+        log.info("清理数据开始");
+        FakerUtils.cleanMysqlData(sqlVehicle);
+        FakerUtils.cleanMysqlData(sqlCustomer);
+        log.info("清理数据结束");
+    }
 
     //创建车辆名单
     //@Test
@@ -120,12 +132,12 @@ public class VechicleListTest {
 // 列表页面数据查询
     //@Test
     @Description("调用接口：/v1/blacklist/vehicle/paging，分别查询各种类型")
-    @DisplayName("查询第2页到数据，和指定到给灰名单，并断言当前页数和列表数据到状态是灰名单")
+    @DisplayName("查询第1页到数据，和指定到给灰名单，并断言当前页数和列表数据到状态是灰名单")
     @CsvFileSource(resources = "/data/VechicleTypeId/Type.csv",numLinesToSkip = 2)
     @ParameterizedTest()
     public void pagingVehicle(int typeList,String remarke){
         HashMap<String,Object> pageDate = new HashMap<String, Object>();
-        pageDate.put("current",2);
+        pageDate.put("current",1);
         pageDate.put("pageSize",10);
         //pageDate.put("plateNo","");
         //0 全部，1 正常 2 灰 3 黑

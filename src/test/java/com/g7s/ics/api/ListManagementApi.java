@@ -1,4 +1,4 @@
-package com.g7s.ics.com.g7s.ics.api;
+package com.g7s.ics.api;
 
 import com.g7s.ics.RequestClasse;
 import com.g7s.ics.utils.FakerUtils;

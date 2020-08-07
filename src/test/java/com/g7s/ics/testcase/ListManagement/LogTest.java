@@ -1,13 +1,15 @@
 package com.g7s.ics.testcase.ListManagement;
 
-import com.g7s.ics.com.g7s.ics.api.ListManagementApi;
+import com.g7s.ics.api.ListManagementApi;
 import com.g7s.ics.utils.FakerUtils;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
 
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -24,6 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Epic("名单管理-测试用例")
 @Feature("日志查询")
 public class LogTest {
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(com.g7s.ics.testcase.ListManagement.LogTest.class);
     ResourceBundle bundle =ResourceBundle.getBundle("Interface/ListInterface");
     String logPath = bundle.getString("logPath");
     String createCustomerPaht = bundle.getString("createCustomerPaht");
@@ -34,6 +37,16 @@ public class LogTest {
     String name ="名称"+ FakerUtils.getTimeStamp();
     String vin ="cjh12"+ FakerUtils.getTimeStamp();
 
+
+    @AfterAll
+    public static void cleanForSQL(){
+        String sqlVehicle ="DELETE  FROM ics_blacklist_vehicle WHERE create_username='zwp别名'";
+        String sqlCustomer ="DELETE  FROM ics_blacklist_customer WHERE create_username='zwp别名'";
+        log.info("清理数据开始");
+        FakerUtils.cleanMysqlData(sqlVehicle);
+        FakerUtils.cleanMysqlData(sqlCustomer);
+        log.info("清理数据结束");
+    }
 
     @Test
     @DisplayName("新增车辆后，变更状态，在获取变更日志")

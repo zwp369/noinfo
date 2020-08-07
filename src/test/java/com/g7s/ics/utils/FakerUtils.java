@@ -1,10 +1,16 @@
 package com.g7s.ics.utils;
 
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 
 import java.security.SignatureException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.HashMap;
 import java.util.ResourceBundle;
+
 
 /**
  * @Author: zhangwenping
@@ -12,23 +18,23 @@ import java.util.ResourceBundle;
  * @Date: Create in 16:20 2020-07-24
  */
 public class FakerUtils {
-    private static  final Logger log =org.slf4j.LoggerFactory.getLogger(com.g7s.ics.utils.FakerUtils.class);
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(com.g7s.ics.utils.FakerUtils.class);
     public static HashMap<String, Object> headers;
     public static HashMap<String, Object> queryParams;
-    public static String getTimeStamp(){
+
+    public static String getTimeStamp() {
         return String.valueOf(System.currentTimeMillis());
     }
-    public static  ResourceBundle bundle= ResourceBundle.getBundle("Evn/Evn");
+
+    public static ResourceBundle bundle = ResourceBundle.getBundle("Evn/Evn");
 
 
-
-    public static String getbasehost(String basePath){
+    public static String getbasehost(String basePath) {
 
 
         //return  bundle.getString("testHost")+basePath;
         //ResourceBundle bundle= ResourceBundle.getBundle("Evn/Evn");
-        return bundle.getString("VUE_APP_VEGA_BASEURL_Test")+"/v1/ics-service"+basePath;
-
+        return bundle.getString("VUE_APP_VEGA_BASEURL_Test") + "/v1/ics-service" + basePath;
 
 
     }
@@ -44,7 +50,7 @@ public class FakerUtils {
     }
 
 
-    public static HashMap<String,Object> getQueryParams(String Uri){
+    public static HashMap<String, Object> getQueryParams(String Uri) {
         queryParams = new HashMap<String, Object>();
         String timestamp = String.valueOf(System.currentTimeMillis());
         queryParams.put("accessid", bundle.getString("VUE_APP_VEGA_ICS_SERVICE_ACCESS_ID_Test"));
@@ -54,7 +60,8 @@ public class FakerUtils {
 
         return queryParams;
     }
-    public static HashMap<String,Object> getQueryParamsInward(String Uri){
+
+    public static HashMap<String, Object> getQueryParamsInward(String Uri) {
         queryParams = new HashMap<String, Object>();
         String timestamp = String.valueOf(System.currentTimeMillis());
         queryParams.put("accessid", bundle.getString("accessId_Inward"));
@@ -66,11 +73,11 @@ public class FakerUtils {
     }
 
 
-
     //生成vega签名
+    @Test
 
     private static String calSign(String secret, String httpVerb, String timestamp, String uri) {
-        String newuri= "/v1/ics-service"+uri;
+        String newuri = "/v1/ics-service" + uri;
         String stringToSign = httpVerb + "\n" + timestamp + "\n" + newuri;
         String sign;
         try {
@@ -83,26 +90,37 @@ public class FakerUtils {
 
 
     // 清理数据库,通过输入sql来执行
-//    public  void cleanMysqlData(String sql){
-//        Class.forName("com.mysql.cj.jdbc.Driver");
-//        String url = "jdbc:mysql://localhost:3306/how2java?characterEncoding=UTF-8";
-//        String username = "root";
-//        String password = "12345678";
-//        Connection conn = null;
-//        Statement st =null;
-//        try{
-//            conn = DriverManager.getConnection(url,username,password);
-//            st = conn.createStatement();
-//            st.execute(sql);
-//        }
-//        catch (SQLException e ){e.printStackTrace();}
-//        finally {
-//            try {
-//                if(st!=null){st.close();}
-//                if (conn!=null){conn.close();}
-//            }catch (SQLException e){e.printStackTrace();}
-//        }
+    public static void cleanMysqlData(String sql) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        String url = "jdbc:mysql://rm-2zeptxy191r28lft7.mysql.rds.aliyuncs.com:3306/ics?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=true&zeroDateTimeBehavior=convertToNull";
+        String username = "ics_2020_rw";
+        String password = "%R2346dD$gv6Uc4t#g";
+        Connection conn = null;
+        Statement st = null;
+        try {
+            conn = DriverManager.getConnection(url, username, password);
+            st = conn.createStatement();
+            st.execute(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 
 

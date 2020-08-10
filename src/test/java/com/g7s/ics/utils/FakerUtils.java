@@ -97,9 +97,9 @@ public class FakerUtils {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        String url = "jdbc:mysql://rm-2zeptxy191r28lft7.mysql.rds.aliyuncs.com:3306/ics?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=true&zeroDateTimeBehavior=convertToNull";
-        String username = "ics_2020_rw";
-        String password = "%R2346dD$gv6Uc4t#g";
+        String url = "jdbc:mysql://rm-2zeptxy191dhjjdjdjd06/ics?serverTimezhdddjterEncoding=utf-8&usejdjjdll";
+        String username = "dhhdhd";
+        String password = "%2hhdhdh#g";
         Connection conn = null;
         Statement st = null;
         try {

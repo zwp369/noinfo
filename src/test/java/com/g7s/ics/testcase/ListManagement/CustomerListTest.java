@@ -8,6 +8,7 @@ import io.qameta.allure.Feature;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -52,6 +53,7 @@ public class CustomerListTest {
 
     //创建车辆名单
     //@Test
+    @Tag("1")
     @Description("调用接口：/v1/blacklist/customer/create， 各创建一次创建客户名单: 1 正常，2灰 ，3黑 -- 相当于备注")
     @DisplayName("各创建一次创建客户名单: 1 正常，2灰 ，3黑")
     @CsvFileSource(resources = "/data/VechicleTypeId/Type.csv",numLinesToSkip = 2)

@@ -6,10 +6,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.slf4j.Logger;
 
 import java.util.HashMap;
@@ -52,7 +49,6 @@ public class LogTest {
     }
 
     @Test
-    @Tag("1")
     @DisplayName("新增车辆后，变更状态，在获取变更日志")
     @Description("车辆变更日志查询")
     public void VehicleLog() {
@@ -89,6 +85,7 @@ public class LogTest {
 
         Response logResponse = ListManagementApi.getLog(logData, logPath);
         assertEquals("0", logResponse.path("code").toString());
+        //FakerUtils.addHttpLogToAllure();
 
 
     }

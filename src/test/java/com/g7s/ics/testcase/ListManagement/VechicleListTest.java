@@ -6,9 +6,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.slf4j.Logger;
@@ -51,6 +49,7 @@ public class VechicleListTest {
 
     //创建车辆名单
     //@Test
+    @Tags({@Tag("Hafl"),@Tag("Smoke")})
     @Description("调用接口：/v1/blacklist/vehicle/create， 各创建一次创建车辆名单: 1 正常，2灰 ，3黑 -- 相当于备注")
     @DisplayName("各创建一次创建车辆名单: 1 正常，2灰 ，3黑")
     @CsvFileSource(resources = "/data/VechicleTypeId/Type.csv",numLinesToSkip = 2)
@@ -74,6 +73,7 @@ public class VechicleListTest {
 
     //同时修改状态和车牌号
     @Test
+    @Tags({@Tag("Hafl"),@Tag("Smoke")})
     @Description("调用接口：/v1/blacklist/vehicle/update，修改车辆名单类型，从灰到黑，并且修车牌号，断言是否是修改后的数据")
     @DisplayName("修改车辆名单类型，从灰到黑，并且修车牌号，断言是否是修改后的数据")
     public void updateVehicleList(){
@@ -110,6 +110,7 @@ public class VechicleListTest {
 
     //单个数据查询
     @Test
+    @Tags({@Tag("Hafl"),@Tag("Smoke")})
     @Description("调用接口：/v1/blacklist/vehicle/detail，新增一个车辆并查询出详细信息")
     @DisplayName("新增一个车辆并查询出详细信息")
     public void detailVehicle(){
@@ -131,6 +132,7 @@ public class VechicleListTest {
     }
 // 列表页面数据查询
     //@Test
+    @Tags({@Tag("Hafl"),@Tag("Smoke")})
     @Description("调用接口：/v1/blacklist/vehicle/paging，分别查询各种类型")
     @DisplayName("查询第1页到数据，和指定到给灰名单，并断言当前页数和列表数据到状态是灰名单")
     @CsvFileSource(resources = "/data/VechicleTypeId/Type.csv",numLinesToSkip = 2)
@@ -155,6 +157,7 @@ public class VechicleListTest {
 
     }
     @Test
+    @Tags({@Tag("Hafl"),@Tag("Smoke")})
     @Description("调用接口：/v1/blacklist/vehicle/paging，查询所有的车辆数据")
     @DisplayName("验证所有数据的查询，每页20条数据")
     public void pagingAllVehicle(){

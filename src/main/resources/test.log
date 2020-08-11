@@ -1,0 +1,48 @@
+Request method:	POST
+Request URI:	https://dsp.test.chinawayltd.com/vega-gw/rest/v1/ics-service/v1/blacklist/customer/detail?accessid=b9ibvkv1sawffm0qb&g7timestamp=1597127902227&sign=YaJdF3wcNQ3fSpkY8dqdffdlyJ8%3D
+Proxy:			<none>
+Request params:	<none>
+Query params:	accessid=b9ibvkv1sawffm0qb
+				g7timestamp=1597127902227
+				sign=YaJdF3wcNQ3fSpkY8dqdffdlyJ8=
+Form params:	<none>
+Path params:	<none>
+Headers:		x-g7-language=zh_CN
+				globalToken=1
+				user=10
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "blacklistId": "2764613474486190338"
+}
+HTTP/1.1 200 
+Server: Tengine
+Date: Tue, 11 Aug 2020 06:38:22 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Application-Context: vega-gateway-zuul:test:5555
+Content-Encoding: gzip
+
+{
+    "code": 0,
+    "msg": "success",
+    "sub_code": 0,
+    "sub_msg": "成功",
+    "req_id": "7314f68fde6e4ec2a55f4ba4cb5093b7",
+    "data": {
+        "blacklistId": "2764613474486190338",
+        "createUserId": 123,
+        "createUsername": "zwp别名",
+        "gmtCreate": 1597127902044,
+        "gmtModified": 1597127902044,
+        "name": "名称1597127901452",
+        "role": 1,
+        "type": 2,
+        "updateUserId": 123,
+        "updateUsername": "zwp别名"
+    }
+}

@@ -1,7 +1,6 @@
 package com.g7s.ics.testcase.ReportDayFinance;
 
 
-
 import com.g7s.ics.api.ReportDayFinanceApi;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -28,6 +27,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ReportDayFinanceTest {
     ResourceBundle bundle =ResourceBundle.getBundle("Interface/ListInterface");
     String FinanceDayReportPath = bundle.getString("FinanceDayReportPath");
+
+
 
     @Test
     @Description("调用接口：/inward/v1/report/day/finance，查询固定值，2020-08-01 的财务日报")

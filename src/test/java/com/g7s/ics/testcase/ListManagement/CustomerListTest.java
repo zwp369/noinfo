@@ -6,10 +6,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.slf4j.Logger;
@@ -51,9 +48,10 @@ public class CustomerListTest {
         log.info("清理数据结束");
     }
 
+
     //创建车辆名单
     //@Test
-    @Tag("1")
+    @Tags({@Tag("Hafl"),@Tag("Smoke")})
     @Description("调用接口：/v1/blacklist/customer/create， 各创建一次创建客户名单: 1 正常，2灰 ，3黑 -- 相当于备注")
     @DisplayName("各创建一次创建客户名单: 1 正常，2灰 ，3黑")
     @CsvFileSource(resources = "/data/VechicleTypeId/Type.csv",numLinesToSkip = 2)
@@ -77,6 +75,7 @@ public class CustomerListTest {
 
     //同时修改状态
     @Test
+    @Tags({@Tag("Hafl"),@Tag("Smoke")})
     @Description("调用接口：/v1/blacklist/customer/update，修改客户名单类型，从灰到黑")
     @DisplayName("修改客户名单类型，从灰到黑，断言是否是修改后的数据")
     public void updateCustomerList(){
@@ -113,6 +112,7 @@ public class CustomerListTest {
 
     //单个数据查询
     @Test
+    @Tags({@Tag("Hafl"),@Tag("Smoke")})
     @Description("调用接口：/v1/blacklist/customer/detail，新增一个客户并查询出详细信息")
     @DisplayName("新增一个客户并查询出详细信息")
     public void detailCustomer(){
@@ -134,6 +134,7 @@ public class CustomerListTest {
     }
     // 列表页面数据查询
     //@Test
+    @Tags({@Tag("Hafl"),@Tag("Smoke")})
     @Description("调用接口：/v1/blacklist/customer/paging，分别查询各种类型")
     @DisplayName("查询第1页到数据，和指定到给灰名单，并断言当前页数和列表数据到状态是灰名单")
     @CsvFileSource(resources = "/data/VechicleTypeId/Type.csv",numLinesToSkip = 2)
@@ -158,6 +159,7 @@ public class CustomerListTest {
 
     }
     @Test
+    @Tags({@Tag("Hafl"),@Tag("Smoke")})
     @Description("调用接口：/v1/blacklist/customer/paging，查询所有的客户数据")
     @DisplayName("验证所有数据的查询，每页20条数据")
     public void pagingAllCustomer(){

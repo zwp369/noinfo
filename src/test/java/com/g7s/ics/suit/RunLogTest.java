@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 @RunWith(JUnitPlatform.class)
 @SelectPackages({
         "com.g7s.ics.testcase.ListManagement",
-        "com.g7s.ics.demo"
+        //"com.g7s.ics.demo"
 })
 
 public class RunLogTest {

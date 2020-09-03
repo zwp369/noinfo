@@ -29,7 +29,7 @@ import org.junit.runner.RunWith;
 })
 
 @IncludeTags("Hafl")
-public class RegressionTest {
+public class RegressionTes {
 
 
 }

@@ -43,8 +43,8 @@ public class FakerUtils {
     //public static HashMap<String, Object> headers;
     public static HashMap getheader() {
         headers = new HashMap<String, Object>();
-        headers.put("globalToken", 1);
-        headers.put("user", 10);
+        headers.put("X-ICS-USERID", 273);
+        headers.put("X-ICS-USERNAME", "xiaozhangzhang");
         headers.put("x-g7-language", "zh_CN");
         return headers;
     }

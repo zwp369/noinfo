@@ -1,0 +1,656 @@
+Request method:	POST
+Request URI:	https://dsp.test.chinawayltd.com/vega-gw/rest/v1/ics-service/v1/order/paging?accessid=b9ibvkv1sawffm0qb&g7timestamp=1600419667662&sign=5H7eI9lvS6lLZLOswWKdU%2FVOMpU%3D
+Proxy:			<none>
+Request params:	<none>
+Query params:	accessid=b9ibvkv1sawffm0qb
+				g7timestamp=1600419667662
+				sign=5H7eI9lvS6lLZLOswWKdU/VOMpU=
+Form params:	<none>
+Path params:	<none>
+Headers:		X-ICS-USERNAME=xiaozhangzhang
+				X-ICS-USERID=273
+				x-g7-language=zh_CN
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "plateNo": "",
+    "vin": "",
+    "policyNo": "",
+    "inputTimeBegin": "",
+    "inputTimeEnd": "",
+    "companyCode": "BOCI",
+    "saleName": "",
+    "belongRegionCode": "",
+    "securityMode": "",
+    "insuredCustomerId": "",
+    "departmentName": "",
+    "pageSize": 10,
+    "current": 1
+}
+HTTP/1.1 200 OK
+Date: Fri, 18 Sep 2020 09:01:13 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: aliyungf_tc=AQAAAFL84XbfWQwAfjSUtpTHyyVx1mkk; Path=/; HttpOnly
+Set-Cookie: acw_tc=76b20ff416004196728197132e3da6367fcea4dc41123296d82c48338fbb8b;path=/;HttpOnly;Max-Age=1800
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Encoding: gzip
+X-Kong-Upstream-Latency: 304
+X-Kong-Proxy-Latency: 5
+Via: kong/2.0.0
+
+{
+    "code": 0,
+    "msg": "success",
+    "sub_code": 0,
+    "sub_msg": "成功",
+    "req_id": "7540.69.16004196729762523",
+    "data": {
+        "current": 1,
+        "hitCount": false,
+        "optimizeCountSql": true,
+        "orders": [
+            
+        ],
+        "pages": 365,
+        "records": [
+            {
+                "applyCustomer": {
+                    "customerId": "1291208610961023055",
+                    "identificationNo": "",
+                    "name": "导入示例名称",
+                    "type": 2
+                },
+                "applyCustomerId": "1291208610961023055",
+                "belongRegionCode": 5,
+                "belongRegionName": "陕西",
+                "company": {
+                    "code": "BOCI",
+                    "crmCode": "P202007090003",
+                    "name": "中银保险有限公司",
+                    "simple": "中银"
+                },
+                "departmentFirst": "区域经营事业部",
+                "departmentName": "区域经营事业部-西南区域经营中心",
+                "inputTime": "2020-09-18",
+                "insuranceCommission": 0.0,
+                "insuredCustomer": {
+                    "customerId": "1291208610961023055",
+                    "identificationNo": "",
+                    "name": "导入示例名称",
+                    "type": 2
+                },
+                "insuredCustomerId": "1291208610961023055",
+                "orderId": "2863340777503851011",
+                "orderNo": "T20200914535c24",
+                "plateNo": "豫HJ1090",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "陈中英(都别动！谢谢！)",
+                "securityMode": {
+                    "code": 110,
+                    "name": "安保新装设备模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "2863340777503851011",
+                        "orderSubId": "2863340778376266247",
+                        "policyNo": "BDHCESHI202009140002",
+                        "premium": 3136.0
+                    },
+                    "commercial": {
+                        "orderId": "2863340777503851011",
+                        "orderSubId": "2863340777872949768",
+                        "policyNo": "BDHCESHI202009140001",
+                        "premium": 3136.0
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 1,
+                "typeInOperateName": "xiaozhangzhang",
+                "typeInTime": "2020-09-14 15:58:18",
+                "vin": "CHJCESHI202009140001"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1291208610961023055",
+                    "identificationNo": "",
+                    "name": "导入示例名称",
+                    "type": 2
+                },
+                "applyCustomerId": "1291208610961023055",
+                "belongRegionCode": 5,
+                "belongRegionName": "陕西",
+                "company": {
+                    "code": "BOCI",
+                    "crmCode": "P202007090003",
+                    "name": "中银保险有限公司",
+                    "simple": "中银"
+                },
+                "departmentFirst": "区域经营事业部",
+                "departmentName": "区域经营事业部-西南区域经营中心",
+                "inputTime": "2020-09-18",
+                "insuranceCommission": 0.0,
+                "insuredCustomer": {
+                    "customerId": "1291208610961023055",
+                    "identificationNo": "",
+                    "name": "导入示例名称",
+                    "type": 2
+                },
+                "insuredCustomerId": "1291208610961023055",
+                "orderId": "2857409268351634181",
+                "orderNo": "T20200912d1daaf",
+                "plateNo": "豫HJ1444",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "陈中英(都别动！谢谢！)",
+                "securityMode": {
+                    "code": 110,
+                    "name": "安保新装设备模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "2857409268351634181",
+                        "orderSubId": "2857409304321985285",
+                        "policyNo": "BDHCESHI202009100445",
+                        "premium": 3136.0
+                    },
+                    "commercial": {
+                        "orderId": "2857409268351634181",
+                        "orderSubId": "2857409283686009606",
+                        "policyNo": "BDHCESHI202009100444",
+                        "premium": 3136.0
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "CHJCESHI202009100444"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1291208610961023055",
+                    "identificationNo": "",
+                    "name": "导入示例名称",
+                    "type": 2
+                },
+                "applyCustomerId": "1291208610961023055",
+                "belongRegionCode": 0,
+                "belongRegionName": "其它",
+                "company": {
+                    "code": "BOCI",
+                    "crmCode": "P202007090003",
+                    "name": "中银保险有限公司",
+                    "simple": "中银"
+                },
+                "departmentFirst": "区域经营事业部",
+                "departmentName": "区域经营事业部-西南区域经营中心",
+                "inputTime": "2020-09-18",
+                "insuranceCommission": 0.0,
+                "insuredCustomer": {
+                    "customerId": "1291208610961023055",
+                    "identificationNo": "",
+                    "name": "导入示例名称",
+                    "type": 2
+                },
+                "insuredCustomerId": "1291208610961023055",
+                "orderId": "2857397679858781703",
+                "orderNo": "T2020091236caa8",
+                "plateNo": "豫HJ1333",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "陈中英(都别动！谢谢！)",
+                "securityMode": {
+                    "code": 120,
+                    "name": "安保已装设备模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "2857397679858781703",
+                        "orderSubId": "2857397680731196932",
+                        "policyNo": "BDHCESHI202009100334",
+                        "premium": 3136.0
+                    },
+                    "commercial": {
+                        "orderId": "2857397679858781703",
+                        "orderSubId": "2857397680160771585",
+                        "policyNo": "BDHCESHI202009100333",
+                        "premium": 3136.0
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "CHJCESHI202009100333"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1291208610961023055",
+                    "identificationNo": "",
+                    "name": "导入示例名称",
+                    "type": 2
+                },
+                "applyCustomerId": "1291208610961023055",
+                "belongRegionCode": 5,
+                "belongRegionName": "陕西",
+                "company": {
+                    "code": "BOCI",
+                    "crmCode": "P202007090003",
+                    "name": "中银保险有限公司",
+                    "simple": "中银"
+                },
+                "departmentFirst": "区域经营事业部",
+                "departmentName": "区域经营事业部-西南区域经营中心",
+                "inputTime": "2020-09-18",
+                "insuranceCommission": 0.0,
+                "insuredCustomer": {
+                    "customerId": "1291208610961023055",
+                    "identificationNo": "",
+                    "name": "导入示例名称",
+                    "type": 2
+                },
+                "insuredCustomerId": "1291208610961023055",
+                "orderId": "2854822658825129862",
+                "orderNo": "T2020091197b72d",
+                "plateNo": "豫HJ1090",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "陈中英(都别动！谢谢！)",
+                "securityMode": {
+                    "code": 120,
+                    "name": "安保已装设备模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "2854822658825129862",
+                        "orderSubId": "2854825516119232392",
+                        "policyNo": "BDHCESHI202009100006",
+                        "premium": 3136.0
+                    },
+                    "commercial": {
+                        "orderId": "2854822658825129862",
+                        "orderSubId": "2854822660838395779",
+                        "policyNo": "BDHCESHI202009100005",
+                        "premium": 3136.0
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "CHJCESHI202009100005"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1291208610961023055",
+                    "identificationNo": "",
+                    "name": "导入示例名称",
+                    "type": 2
+                },
+                "applyCustomerId": "1291208610961023055",
+                "belongRegionCode": 0,
+                "belongRegionName": "其它",
+                "company": {
+                    "code": "BOCI",
+                    "crmCode": "P202007090003",
+                    "name": "中银保险有限公司",
+                    "simple": "中银"
+                },
+                "departmentFirst": "区域经营事业部",
+                "departmentName": "区域经营事业部-西南区域经营中心",
+                "inputTime": "2020-09-18",
+                "insuranceCommission": 0.0,
+                "insuredCustomer": {
+                    "customerId": "1291208610961023055",
+                    "identificationNo": "",
+                    "name": "导入示例名称",
+                    "type": 2
+                },
+                "insuredCustomerId": "1291208610961023055",
+                "orderId": "2854702616569580291",
+                "orderNo": "T20200911a09fa5",
+                "plateNo": "豫HJ1090",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "陈中英(都别动！谢谢！)",
+                "securityMode": {
+                    "code": 120,
+                    "name": "安保已装设备模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "2854702616569580291",
+                        "orderSubId": "2854702659519253251",
+                        "policyNo": "BDHCESHI202009100003",
+                        "premium": 3136.0
+                    },
+                    "commercial": {
+                        "orderId": "2854702616569580291",
+                        "orderSubId": "2854702634521201417",
+                        "policyNo": "BDHCESHI202009100004",
+                        "premium": 3136.0
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "CHJCESHI202009100003"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1291208610961023479",
+                    "identificationNo": "",
+                    "name": "被保人",
+                    "type": 2
+                },
+                "applyCustomerId": "1291208610961023479",
+                "belongRegionCode": 5,
+                "belongRegionName": "陕西",
+                "company": {
+                    "code": "BOCI",
+                    "crmCode": "P202007090003",
+                    "name": "中银保险有限公司",
+                    "simple": "中银"
+                },
+                "departmentFirst": "区域经营事业部",
+                "departmentName": "区域经营事业部-西南区域经营中心",
+                "inputTime": "2020-09-18",
+                "insuranceCommission": 0.0,
+                "insuredCustomer": {
+                    "customerId": "1291208610961023478",
+                    "identificationNo": "",
+                    "name": "投保人",
+                    "type": 2
+                },
+                "insuredCustomerId": "1291208610961023478",
+                "orderId": "2874978204429453191",
+                "orderNo": "T2020091824527a",
+                "plateNo": "川A1222",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "陈中英(都别动！谢谢！)",
+                "securityMode": {
+                    "code": 100,
+                    "name": "非安保模式"
+                },
+                "status": 1,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "2874978204429453191",
+                        "orderSubId": "2874978204630779779",
+                        "policyNo": "BDHAj1600417029895",
+                        "premium": 300.0
+                    },
+                    "commercial": {
+                        "orderId": "2874978204429453191",
+                        "orderSubId": "2874978228420872064",
+                        "policyNo": "",
+                        "premium": 300.0
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 1,
+                "typeInOperateName": "xiaozhangzhang",
+                "typeInTime": "2020-09-18 16:17:09",
+                "vin": "CHJA1600417029895"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1291208610961023479",
+                    "identificationNo": "",
+                    "name": "被保人",
+                    "type": 2
+                },
+                "applyCustomerId": "1291208610961023479",
+                "belongRegionCode": 5,
+                "belongRegionName": "陕西",
+                "company": {
+                    "code": "BOCI",
+                    "crmCode": "P202007090003",
+                    "name": "中银保险有限公司",
+                    "simple": "中银"
+                },
+                "departmentFirst": "区域经营事业部",
+                "departmentName": "区域经营事业部-西南区域经营中心",
+                "inputTime": "2020-09-18",
+                "insuranceCommission": 0.0,
+                "insuredCustomer": {
+                    "customerId": "1291208610961023478",
+                    "identificationNo": "",
+                    "name": "投保人",
+                    "type": 2
+                },
+                "insuredCustomerId": "1291208610961023478",
+                "orderId": "2874977942637774723",
+                "orderNo": "T20200918369b32",
+                "plateNo": "川A1222",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "陈中英(都别动！谢谢！)",
+                "securityMode": {
+                    "code": 100,
+                    "name": "非安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "2874977942637774723",
+                        "orderSubId": "2874977942872655750",
+                        "policyNo": "BDHAj1600417022143",
+                        "premium": 300.0
+                    },
+                    "commercial": {
+                        "orderId": "2874977942637774723",
+                        "orderSubId": "2874977964280383364",
+                        "policyNo": "",
+                        "premium": 300.0
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 1,
+                "typeInOperateName": "xiaozhangzhang",
+                "typeInTime": "2020-09-18 16:17:02",
+                "vin": "CHJA1600417022143"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1291208610961023479",
+                    "identificationNo": "",
+                    "name": "被保人",
+                    "type": 2
+                },
+                "applyCustomerId": "1291208610961023479",
+                "belongRegionCode": 0,
+                "belongRegionName": "其它",
+                "company": {
+                    "code": "BOCI",
+                    "crmCode": "P202007090003",
+                    "name": "中银保险有限公司",
+                    "simple": "中银"
+                },
+                "departmentFirst": "区域经营事业部",
+                "departmentName": "区域经营事业部-西南区域经营中心",
+                "inputTime": "2020-09-18",
+                "insuranceCommission": 0.0,
+                "insuredCustomer": {
+                    "customerId": "1291208610961023478",
+                    "identificationNo": "",
+                    "name": "投保人",
+                    "type": 2
+                },
+                "insuredCustomerId": "1291208610961023478",
+                "orderId": "2874977845564802949",
+                "orderNo": "T20200918d708ea",
+                "plateNo": "川A1222",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "陈中英(都别动！谢谢！)",
+                "securityMode": {
+                    "code": 110,
+                    "name": "安保新装设备模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "2874977845564802949",
+                        "orderSubId": "2874977845766129544",
+                        "policyNo": "BDHAj1600417016023",
+                        "premium": 300.0
+                    },
+                    "commercial": {
+                        "orderId": "2874977845564802949",
+                        "orderSubId": "2874977872710338440",
+                        "policyNo": "BDHAs1600417016023",
+                        "premium": 300.0
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "CHJA1600417016023"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1291208610961023479",
+                    "identificationNo": "",
+                    "name": "被保人",
+                    "type": 2
+                },
+                "applyCustomerId": "1291208610961023479",
+                "belongRegionCode": 0,
+                "belongRegionName": "其它",
+                "company": {
+                    "code": "BOCI",
+                    "crmCode": "P202007090003",
+                    "name": "中银保险有限公司",
+                    "simple": "中银"
+                },
+                "departmentFirst": "区域经营事业部",
+                "departmentName": "区域经营事业部-西南区域经营中心",
+                "inputTime": "2020-09-18",
+                "insuranceCommission": 0.0,
+                "insuredCustomer": {
+                    "customerId": "1291208610961023478",
+                    "identificationNo": "",
+                    "name": "投保人",
+                    "type": 2
+                },
+                "insuredCustomerId": "1291208610961023478",
+                "orderId": "2874977772818794374",
+                "orderNo": "T20200918f7bb2d",
+                "plateNo": "川A1222",
+                "riskGroup": {
+                    "code": 2,
+                    "name": "单商业"
+                },
+                "saleName": "陈中英(都别动！谢谢！)",
+                "securityMode": {
+                    "code": 110,
+                    "name": "安保新装设备模式"
+                },
+                "status": 0,
+                "sub": {
+                    "commercial": {
+                        "orderId": "2874977772818794374",
+                        "orderSubId": "2874977773053675395",
+                        "policyNo": "BDHA1600417013856",
+                        "premium": 300.0
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "CHJA1600417013856"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1291208610961023479",
+                    "identificationNo": "",
+                    "name": "被保人",
+                    "type": 2
+                },
+                "applyCustomerId": "1291208610961023479",
+                "belongRegionCode": 0,
+                "belongRegionName": "其它",
+                "company": {
+                    "code": "BOCI",
+                    "crmCode": "P202007090003",
+                    "name": "中银保险有限公司",
+                    "simple": "中银"
+                },
+                "departmentFirst": "区域经营事业部",
+                "departmentName": "区域经营事业部-西南区域经营中心",
+                "inputTime": "2020-09-18",
+                "insuranceCommission": 0.0,
+                "insuredCustomer": {
+                    "customerId": "1291208610961023478",
+                    "identificationNo": "",
+                    "name": "投保人",
+                    "type": 2
+                },
+                "insuredCustomerId": "1291208610961023478",
+                "orderId": "2874977701347854212",
+                "orderNo": "T20200918842d26",
+                "plateNo": "川A1222",
+                "riskGroup": {
+                    "code": 1,
+                    "name": "单交强"
+                },
+                "saleName": "陈中英(都别动！谢谢！)",
+                "securityMode": {
+                    "code": 100,
+                    "name": "非安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "2874977701347854212",
+                        "orderSubId": "2874977701582735241",
+                        "policyNo": "BDHA1600417011748",
+                        "premium": 300.0
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "CHJA1600417011748"
+            }
+        ],
+        "searchCount": true,
+        "size": 10,
+        "total": 3650
+    }
+}

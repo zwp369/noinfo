@@ -1,0 +1,128 @@
+Request method:	POST
+Request URI:	https://dsp.test.chinawayltd.com/vega-gw/rest/v1/ics-service/v1/order/paging?accessid=b9ibvkv1sawffm0qb&g7timestamp=1600419713075&sign=D23x%2BgPOOSODmKYiNFKipddLG7s%3D
+Proxy:			<none>
+Request params:	<none>
+Query params:	accessid=b9ibvkv1sawffm0qb
+				g7timestamp=1600419713075
+				sign=D23x+gPOOSODmKYiNFKipddLG7s=
+Form params:	<none>
+Path params:	<none>
+Headers:		X-ICS-USERNAME=xiaozhangzhang
+				X-ICS-USERID=273
+				x-g7-language=zh_CN
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "plateNo": "",
+    "vin": "CHJA1600411817982",
+    "policyNo": "",
+    "inputTimeBegin": "",
+    "inputTimeEnd": "",
+    "companyCode": "BOCI",
+    "saleName": "",
+    "belongRegionCode": "",
+    "securityMode": "",
+    "insuredCustomerId": "",
+    "departmentName": "",
+    "pageSize": 10,
+    "current": 1
+}
+HTTP/1.1 200 OK
+Date: Fri, 18 Sep 2020 09:01:58 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: aliyungf_tc=AQAAAE8m8iJy4AMAfjSUtn8INmoyMC6X; Path=/; HttpOnly
+Set-Cookie: acw_tc=76b20feb16004197182635969e591fe3c8681ff1a4da976feddbc3244a2b0b;path=/;HttpOnly;Max-Age=1800
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Encoding: gzip
+X-Kong-Upstream-Latency: 320
+X-Kong-Proxy-Latency: 6
+Via: kong/2.0.0
+
+{
+    "code": 0,
+    "msg": "success",
+    "sub_code": 0,
+    "sub_msg": "成功",
+    "req_id": "7540.66.16004197184287739",
+    "data": {
+        "current": 1,
+        "hitCount": false,
+        "optimizeCountSql": true,
+        "orders": [
+            
+        ],
+        "pages": 1,
+        "records": [
+            {
+                "applyCustomer": {
+                    "customerId": "1291208610961023479",
+                    "identificationNo": "",
+                    "name": "被保人",
+                    "type": 2
+                },
+                "applyCustomerId": "1291208610961023479",
+                "belongRegionCode": 5,
+                "belongRegionName": "陕西",
+                "company": {
+                    "code": "BOCI",
+                    "crmCode": "P202007090003",
+                    "name": "中银保险有限公司",
+                    "simple": "中银"
+                },
+                "departmentFirst": "区域经营事业部",
+                "departmentName": "区域经营事业部-西南区域经营中心",
+                "inputTime": "2020-09-18",
+                "insuranceCommission": 0.0,
+                "insuredCustomer": {
+                    "customerId": "1291208610961023478",
+                    "identificationNo": "",
+                    "name": "投保人",
+                    "type": 2
+                },
+                "insuredCustomerId": "1291208610961023478",
+                "orderId": "2874803413688911746",
+                "orderNo": "T20200918e50de2",
+                "plateNo": "川A1222",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "陈中英(都别动！谢谢！)",
+                "securityMode": {
+                    "code": 100,
+                    "name": "非安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "2874803413688911746",
+                        "orderSubId": "2874803414024456064",
+                        "policyNo": "BDHAj1600411817982",
+                        "premium": 300.0
+                    },
+                    "commercial": {
+                        "orderId": "2874803413688911746",
+                        "orderSubId": "2874803463282362248",
+                        "policyNo": "",
+                        "premium": 300.0
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 1,
+                "typeInOperateName": "xiaozhangzhang",
+                "typeInTime": "2020-09-18 14:50:22",
+                "vin": "CHJA1600411817982"
+            }
+        ],
+        "searchCount": true,
+        "size": 10,
+        "total": 1
+    }
+}

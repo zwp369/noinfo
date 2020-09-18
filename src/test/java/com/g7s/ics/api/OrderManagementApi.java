@@ -40,4 +40,10 @@ public class OrderManagementApi {
 
 
     }
+    public static Response OrderSearch(Object data, String basePath){
+
+        return  RequestClasse.Request(data, FakerUtils.getheader(),FakerUtils.getQueryParams(basePath), FakerUtils.getbasehost(basePath));
+
+
+    }
 }

@@ -1,0 +1,15 @@
+{
+  "plateNo": "{{plateNo}}",
+  "vin": "{{vin}}",
+  "policyNo": "{{policyNo}}",
+  "inputTimeBegin": "{{inputTimeBegin}}",
+  "inputTimeEnd": "{{inputTimeEnd}}",
+  "companyCode": "{{companyCode}}",
+  "saleName": "{{saleName}}",
+  "belongRegionCode": "{{belongRegionCode}}",
+  "securityMode": "{{securityMode}}",
+  "insuredCustomerId": "{{insuredCustomerId}}",
+  "departmentName": "{{departmentName}}",
+  "pageSize": 10,
+  "current": 1
+}

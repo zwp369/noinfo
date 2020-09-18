@@ -1,0 +1,632 @@
+Request method:	POST
+Request URI:	https://dsp.test.chinawayltd.com/vega-gw/rest/v1/ics-service/v1/order/paging?accessid=b9ibvkv1sawffm0qb&g7timestamp=1600419713922&sign=yHhSzdj%2Bz4CyKV%2Bgm9vVr3ZPav4%3D
+Proxy:			<none>
+Request params:	<none>
+Query params:	accessid=b9ibvkv1sawffm0qb
+				g7timestamp=1600419713922
+				sign=yHhSzdj+z4CyKV+gm9vVr3ZPav4=
+Form params:	<none>
+Path params:	<none>
+Headers:		X-ICS-USERNAME=xiaozhangzhang
+				X-ICS-USERID=273
+				x-g7-language=zh_CN
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "plateNo": "",
+    "vin": "",
+    "policyNo": "",
+    "inputTimeBegin": "",
+    "inputTimeEnd": "",
+    "companyCode": "",
+    "saleName": "",
+    "belongRegionCode": "",
+    "securityMode": "-1",
+    "insuredCustomerId": "",
+    "departmentName": "",
+    "pageSize": 10,
+    "current": 1
+}
+HTTP/1.1 200 OK
+Date: Fri, 18 Sep 2020 09:01:59 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: aliyungf_tc=AQAAANp/PmDHNAEAfjSUtnieUbJK8ad1; Path=/; HttpOnly
+Set-Cookie: acw_tc=76b20fee16004197190883415e6f291d25947d8904dc5a4d8466894adb3ee4;path=/;HttpOnly;Max-Age=1800
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Encoding: gzip
+X-Kong-Upstream-Latency: 302
+X-Kong-Proxy-Latency: 5
+Via: kong/2.0.0
+
+{
+    "code": 0,
+    "msg": "success",
+    "sub_code": 0,
+    "sub_msg": "成功",
+    "req_id": "7540.68.16004197192452945",
+    "data": {
+        "current": 1,
+        "hitCount": false,
+        "optimizeCountSql": true,
+        "orders": [
+            
+        ],
+        "pages": 176,
+        "records": [
+            {
+                "applyCustomer": {
+                    "customerId": "1298528047973957633",
+                    "identificationNo": "BBRcdoe1272727722",
+                    "name": "欢乐有限公司-被保人",
+                    "type": 2
+                },
+                "applyCustomerId": "1298528047973957633",
+                "belongRegionCode": 0,
+                "belongRegionName": "",
+                "company": {
+                    "code": "TKRS",
+                    "crmCode": "P201912040002",
+                    "name": "泰康在线财产保险股份有限公司",
+                    "simple": "泰康在线"
+                },
+                "departmentFirst": "",
+                "departmentName": "",
+                "inputTime": "2020-09-14",
+                "insuranceCommission": 9524.86,
+                "insuredCustomer": {
+                    "customerId": "1298528047944597506",
+                    "identificationNo": "TBRcode135512341212",
+                    "name": "欢乐有限公司-投保人",
+                    "type": 2
+                },
+                "insuredCustomerId": "1298528047944597506",
+                "orderId": "1305391596862799873",
+                "orderNo": "T202009142e2842",
+                "plateNo": "川A12345",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "",
+                "securityMode": {
+                    "code": -1,
+                    "name": "未选择安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "1305391596862799873",
+                        "orderSubId": "1305391596883771393",
+                        "policyNo": "BHDT20200914000002",
+                        "premium": 850.0
+                    },
+                    "commercial": {
+                        "orderId": "1305391596862799873",
+                        "orderSubId": "1305391596879577090",
+                        "policyNo": "BHDT20200914000001",
+                        "premium": 15824.46
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "CHJTVIN202009140002"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1303943813640921090",
+                    "identificationNo": "361028200108092628",
+                    "name": "泰康在线",
+                    "type": 2
+                },
+                "applyCustomerId": "1303943813640921090",
+                "belongRegionCode": 0,
+                "belongRegionName": "",
+                "company": {
+                    "code": "TKRS",
+                    "crmCode": "P201912040002",
+                    "name": "泰康在线财产保险股份有限公司",
+                    "simple": "泰康在线"
+                },
+                "departmentFirst": "",
+                "departmentName": "",
+                "inputTime": "2020-09-10",
+                "insuranceCommission": 591.53,
+                "insuredCustomer": {
+                    "customerId": "1303943813640921090",
+                    "identificationNo": "361028200108092628",
+                    "name": "泰康在线",
+                    "type": 2
+                },
+                "insuredCustomerId": "1303943813640921090",
+                "orderId": "1303943814085517314",
+                "orderNo": "T202009102dd0a7",
+                "plateNo": "京D67564",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "",
+                "securityMode": {
+                    "code": -1,
+                    "name": "未选择安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "1303943814085517314",
+                        "orderSubId": "1303943814605611010",
+                        "policyNo": "61202110808202025465000001",
+                        "premium": 2945.1
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "KA5TUZ0G7R6VXRDG0"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1297199677107634177",
+                    "identificationNo": "130731199111180327",
+                    "name": "欢乐有限公司",
+                    "type": 2
+                },
+                "applyCustomerId": "1297199677107634177",
+                "belongRegionCode": 0,
+                "belongRegionName": "",
+                "company": {
+                    "code": "TKRS",
+                    "crmCode": "P201912040002",
+                    "name": "泰康在线财产保险股份有限公司",
+                    "simple": "泰康在线"
+                },
+                "departmentFirst": "",
+                "departmentName": "",
+                "inputTime": "2020-08-20",
+                "insuranceCommission": 1401.26,
+                "insuredCustomer": {
+                    "customerId": "1297199677107634177",
+                    "identificationNo": "130731199111180327",
+                    "name": "欢乐有限公司",
+                    "type": 2
+                },
+                "insuredCustomerId": "1297199677107634177",
+                "orderId": "1300450341485507182",
+                "orderNo": "T202008207c1a9f",
+                "plateNo": "暂未上牌",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "",
+                "securityMode": {
+                    "code": -1,
+                    "name": "未选择安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "1300450341485507182",
+                        "orderSubId": "1300450387354415499",
+                        "policyNo": "06669560807412090000000002",
+                        "premium": 950.0
+                    },
+                    "commercial": {
+                        "orderId": "1300450341485507182",
+                        "orderSubId": "1300450387354415498",
+                        "policyNo": "06669560803412090000000002",
+                        "premium": 4824.46
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "YGSREDRTFDTR73634"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1298528047973957633",
+                    "identificationNo": "BBRcdoe1272727722",
+                    "name": "欢乐有限公司-被保人",
+                    "type": 2
+                },
+                "applyCustomerId": "1298528047973957633",
+                "belongRegionCode": 0,
+                "belongRegionName": "",
+                "company": {
+                    "code": "TKRS",
+                    "crmCode": "P201912040002",
+                    "name": "泰康在线财产保险股份有限公司",
+                    "simple": "泰康在线"
+                },
+                "departmentFirst": "",
+                "departmentName": "",
+                "inputTime": "2020-08-20",
+                "insuranceCommission": 9524.86,
+                "insuredCustomer": {
+                    "customerId": "1298528047944597506",
+                    "identificationNo": "TBRcode135512341212",
+                    "name": "欢乐有限公司-投保人",
+                    "type": 2
+                },
+                "insuredCustomerId": "1298528047944597506",
+                "orderId": "1305065940069220353",
+                "orderNo": "T2020091319f8c9",
+                "plateNo": "川A12345",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "",
+                "securityMode": {
+                    "code": -1,
+                    "name": "未选择安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "1305065940069220353",
+                        "orderSubId": "1305065940098580482",
+                        "policyNo": "BHDT20200826000001",
+                        "premium": 850.0
+                    },
+                    "commercial": {
+                        "orderId": "1305065940069220353",
+                        "orderSubId": "1305065940090191873",
+                        "policyNo": "BHDT20200826000005",
+                        "premium": 15824.46
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "CHJTVIN202009130001"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1298528047973957633",
+                    "identificationNo": "BBRcdoe1272727722",
+                    "name": "欢乐有限公司-被保人",
+                    "type": 2
+                },
+                "applyCustomerId": "1298528047973957633",
+                "belongRegionCode": 0,
+                "belongRegionName": "",
+                "company": {
+                    "code": "TKRS",
+                    "crmCode": "P201912040002",
+                    "name": "泰康在线财产保险股份有限公司",
+                    "simple": "泰康在线"
+                },
+                "departmentFirst": "",
+                "departmentName": "",
+                "inputTime": "2020-08-20",
+                "insuranceCommission": 9524.86,
+                "insuredCustomer": {
+                    "customerId": "1298528047944597506",
+                    "identificationNo": "TBRcode135512341212",
+                    "name": "欢乐有限公司-投保人",
+                    "type": 2
+                },
+                "insuredCustomerId": "1298528047944597506",
+                "orderId": "1304263524708626434",
+                "orderNo": "T20200911bbb77a",
+                "plateNo": "暂未上牌",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "",
+                "securityMode": {
+                    "code": -1,
+                    "name": "未选择安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "compulsory": {
+                        "orderId": "1304263524708626434",
+                        "orderSubId": "1304263526927413249",
+                        "policyNo": "BHDT20200831000005",
+                        "premium": 850.0
+                    },
+                    "commercial": {
+                        "orderId": "1304263524708626434",
+                        "orderSubId": "1304263526226964482",
+                        "policyNo": "BHDT20200831000004",
+                        "premium": 15824.46
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "CHJTVIN202008310004"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1300409395002642826",
+                    "identificationNo": "91141082070452766E",
+                    "name": "被保人-霍州市红贸汽车运输有限公司",
+                    "type": 2
+                },
+                "applyCustomerId": "1300409395002642826",
+                "belongRegionCode": 0,
+                "belongRegionName": "",
+                "company": {
+                    "code": "TKRS",
+                    "crmCode": "P201912040002",
+                    "name": "泰康在线财产保险股份有限公司",
+                    "simple": "泰康在线"
+                },
+                "departmentFirst": "",
+                "departmentName": "",
+                "inputTime": "2020-08-17",
+                "insuranceCommission": 6272.0,
+                "insuredCustomer": {
+                    "customerId": "1300409395002642825",
+                    "identificationNo": "91141082070452766E",
+                    "name": "投保人-霍霍",
+                    "type": 2
+                },
+                "insuredCustomerId": "1300409395002642825",
+                "orderId": "1300450341485507151",
+                "orderNo": "T202008180a53ba",
+                "plateNo": "浙D17015",
+                "riskGroup": {
+                    "code": 3,
+                    "name": "交商同保"
+                },
+                "saleName": "",
+                "securityMode": {
+                    "code": -1,
+                    "name": "未选择安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "commercial": {
+                        "orderId": "1300450341485507151",
+                        "orderSubId": "1300450387354415471",
+                        "policyNo": "cjh202008170000005",
+                        "premium": 9327.18
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "cjh202008170000005"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1300409395002642826",
+                    "identificationNo": "91141082070452766E",
+                    "name": "被保人-霍州市红贸汽车运输有限公司",
+                    "type": 2
+                },
+                "applyCustomerId": "1300409395002642826",
+                "belongRegionCode": 0,
+                "belongRegionName": "",
+                "company": {
+                    "code": "TKRS",
+                    "crmCode": "P201912040002",
+                    "name": "泰康在线财产保险股份有限公司",
+                    "simple": "泰康在线"
+                },
+                "departmentFirst": "",
+                "departmentName": "",
+                "inputTime": "2020-08-17",
+                "insuranceCommission": 3136.0,
+                "insuredCustomer": {
+                    "customerId": "1300409395002642825",
+                    "identificationNo": "91141082070452766E",
+                    "name": "投保人-霍霍",
+                    "type": 2
+                },
+                "insuredCustomerId": "1300409395002642825",
+                "orderId": "1300450341485507159",
+                "orderNo": "T20200818e1bccc",
+                "plateNo": "浙D17013",
+                "riskGroup": {
+                    "code": 2,
+                    "name": "单商业"
+                },
+                "saleName": "",
+                "securityMode": {
+                    "code": -1,
+                    "name": "未选择安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "commercial": {
+                        "orderId": "1300450341485507159",
+                        "orderSubId": "1300450387354415470",
+                        "policyNo": "cjh202008170000004",
+                        "premium": 9327.18
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "cjh202008170000003"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1300409395002642826",
+                    "identificationNo": "91141082070452766E",
+                    "name": "被保人-霍州市红贸汽车运输有限公司",
+                    "type": 2
+                },
+                "applyCustomerId": "1300409395002642826",
+                "belongRegionCode": 0,
+                "belongRegionName": "",
+                "company": {
+                    "code": "TKRS",
+                    "crmCode": "P201912040002",
+                    "name": "泰康在线财产保险股份有限公司",
+                    "simple": "泰康在线"
+                },
+                "departmentFirst": "",
+                "departmentName": "",
+                "inputTime": "2020-08-17",
+                "insuranceCommission": 3136.0,
+                "insuredCustomer": {
+                    "customerId": "1300409395002642825",
+                    "identificationNo": "91141082070452766E",
+                    "name": "投保人-霍霍",
+                    "type": 2
+                },
+                "insuredCustomerId": "1300409395002642825",
+                "orderId": "1300450341485507158",
+                "orderNo": "T20200818c4c14e",
+                "plateNo": "浙D17013",
+                "riskGroup": {
+                    "code": 2,
+                    "name": "单商业"
+                },
+                "saleName": "",
+                "securityMode": {
+                    "code": -1,
+                    "name": "未选择安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "commercial": {
+                        "orderId": "1300450341485507158",
+                        "orderSubId": "1300450387354415469",
+                        "policyNo": "cjh202008170000003",
+                        "premium": 9327.18
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "cjh202008170000003"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1300409395002642826",
+                    "identificationNo": "91141082070452766E",
+                    "name": "被保人-霍州市红贸汽车运输有限公司",
+                    "type": 2
+                },
+                "applyCustomerId": "1300409395002642826",
+                "belongRegionCode": 0,
+                "belongRegionName": "",
+                "company": {
+                    "code": "TKRS",
+                    "crmCode": "P201912040002",
+                    "name": "泰康在线财产保险股份有限公司",
+                    "simple": "泰康在线"
+                },
+                "departmentFirst": "",
+                "departmentName": "",
+                "inputTime": "2020-08-17",
+                "insuranceCommission": 3136.0,
+                "insuredCustomer": {
+                    "customerId": "1300409395002642825",
+                    "identificationNo": "91141082070452766E",
+                    "name": "投保人-霍霍",
+                    "type": 2
+                },
+                "insuredCustomerId": "1300409395002642825",
+                "orderId": "1300450341485507156",
+                "orderNo": "T202008187a64ae",
+                "plateNo": "浙D17010",
+                "riskGroup": {
+                    "code": 2,
+                    "name": "单商业"
+                },
+                "saleName": "",
+                "securityMode": {
+                    "code": -1,
+                    "name": "未选择安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "commercial": {
+                        "orderId": "1300450341485507156",
+                        "orderSubId": "1300450387354415467",
+                        "policyNo": "cjh202008170000001",
+                        "premium": 9327.18
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "cjh202008170000001"
+            },
+            {
+                "applyCustomer": {
+                    "customerId": "1300409395002642826",
+                    "identificationNo": "91141082070452766E",
+                    "name": "被保人-霍州市红贸汽车运输有限公司",
+                    "type": 2
+                },
+                "applyCustomerId": "1300409395002642826",
+                "belongRegionCode": 0,
+                "belongRegionName": "",
+                "company": {
+                    "code": "TKRS",
+                    "crmCode": "P201912040002",
+                    "name": "泰康在线财产保险股份有限公司",
+                    "simple": "泰康在线"
+                },
+                "departmentFirst": "",
+                "departmentName": "",
+                "inputTime": "2020-08-17",
+                "insuranceCommission": 3136.0,
+                "insuredCustomer": {
+                    "customerId": "1300409395002642825",
+                    "identificationNo": "91141082070452766E",
+                    "name": "投保人-霍霍",
+                    "type": 2
+                },
+                "insuredCustomerId": "1300409395002642825",
+                "orderId": "1300450341485507153",
+                "orderNo": "T20200818155f1d",
+                "plateNo": "浙D17010",
+                "riskGroup": {
+                    "code": 2,
+                    "name": "单商业"
+                },
+                "saleName": "",
+                "securityMode": {
+                    "code": -1,
+                    "name": "未选择安保模式"
+                },
+                "status": 0,
+                "sub": {
+                    "commercial": {
+                        "orderId": "1300450341485507153",
+                        "orderSubId": "1300450387354415468",
+                        "policyNo": "cjh202008170000002",
+                        "premium": 9327.18
+                    }
+                },
+                "syncCrmMessage": "",
+                "syncCrmState": 0,
+                "typeInOperateName": "",
+                "typeInTime": "",
+                "vin": "cjh202008170000001"
+            }
+        ],
+        "searchCount": true,
+        "size": 10,
+        "total": 1756
+    }
+}

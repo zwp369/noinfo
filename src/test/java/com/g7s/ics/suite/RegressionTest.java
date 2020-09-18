@@ -6,6 +6,7 @@ import com.g7s.ics.testcase.ListManagement.LogTest;
 import com.g7s.ics.testcase.ListManagement.VechicleListTest;
 import com.g7s.ics.testcase.OrderManagement.OrderBuLuTest;
 import com.g7s.ics.testcase.OrderManagement.OrderPushToCRMTest;
+import com.g7s.ics.testcase.OrderManagement.OrderSearchTest;
 import com.g7s.ics.testcase.OrderManagement.OrdermodifyTest;
 import com.g7s.ics.testcase.ReportDayFinance.ReportDayFinanceTest;
 import org.junit.platform.runner.JUnitPlatform;
@@ -30,7 +31,8 @@ import org.junit.runner.RunWith;
         ReportDayFinanceTest.class,
         OrderBuLuTest.class,
         OrdermodifyTest.class,
-        OrderPushToCRMTest.class
+        OrderPushToCRMTest.class,
+        OrderSearchTest.class,
 
 
 })

@@ -1,15 +1,23 @@
 package com.g7s.ics.utils;
 
+import com.github.mustachejava.DefaultMustacheFactory;
+import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 
+import java.io.StringWriter;
+import java.io.Writer;
 import java.security.SignatureException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.ResourceBundle;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 
 /**
@@ -20,6 +28,7 @@ import java.util.ResourceBundle;
 public class FakerUtils {
     private static final Logger log = org.slf4j.LoggerFactory.getLogger(com.g7s.ics.utils.FakerUtils.class);
     public static HashMap<String, Object> headers;
+    public static HashMap<String, Object> H5Headers;
     public static HashMap<String, Object> queryParams;
 
     public static String getTimeStamp() {
@@ -40,13 +49,22 @@ public class FakerUtils {
     }
 
 
-    //public static HashMap<String, Object> headers;
+
     public static HashMap getheader() {
         headers = new HashMap<String, Object>();
         headers.put("X-ICS-USERID", 273);
         headers.put("X-ICS-USERNAME", "xiaozhangzhang");
         headers.put("x-g7-language", "zh_CN");
         return headers;
+    }
+    public static HashMap getH5Header() {
+        H5Headers = new HashMap<String, Object>();
+        H5Headers.put("x-g7-language", "zh_CN");
+        H5Headers.put("X-CRM-USER-ID", "8072557f-cbc7-e911-8100-b63d6384c1b5");
+        H5Headers.put("X-CRM-TOKEN","1");
+        H5Headers.put("X-Requested-With","com.huitong.uat");
+        H5Headers.put("Accept-Language","zh-CN,en-US;q=0.8");
+        return H5Headers;
     }
 
 
@@ -122,8 +140,63 @@ public class FakerUtils {
         }
     }
 
+    /**
+     *
+     * @param time
+     * @param isTime true  是时间 false 是日期
+     *
+     * @return
+     */
+// 将时间戳转换成为日期格式
+    public static String getDateToString(String time,boolean isTime) {
+        SimpleDateFormat sdf ;
+        String sd ;
+      if(isTime==true){
+          sdf=new SimpleDateFormat("yyyy-MM-dd");
+          sd = sdf.format(new Date(Long.parseLong(time)));
+      }
+      else {
+          sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+          sd = sdf.format(new Date(Long.parseLong(time)));
+      }
+        return sd;
 
+    }
+
+
+    SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+
+    /**
+     * 模版替换参数
+     * @param path 模版的存储位置
+     * @param data 需要替换的数据
+     * @return
+     */
+    public static String template(String path,HashMap<String, Object> data){
+        Writer writer = new StringWriter();
+        new DefaultMustacheFactory()
+                .compile(path)
+                .execute(writer,data);
+        return writer.toString();
+        //System.out.println(writer.toString());
+    }
+
+    /**
+     * 简单验证结果
+     * @param responseData 需要验证的respone
+     */
+    public static void veriyData(Response responseData) {
+        assertAll(
+                () -> assertEquals("成功", responseData.path("sub_msg")),
+                () -> assertEquals("0", responseData.path("code").toString()),
+                () -> assertNotEquals("null", responseData.path("data").toString())
+
+
+        );
+    }
 
 
 
 }
+
+

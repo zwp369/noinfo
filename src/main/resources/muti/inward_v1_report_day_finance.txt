@@ -1,0 +1,1 @@
+{"areaRegionCode":0,"businessLicenseUrl":"","companyCode":"","devicePackageCode":0,"insuranceTypeList":[{"code":0,"money":0}],"plateNo":"","securityModeCode":0,"vehicleCertificateUrl":"","vehicleLicenseBackUrl":"","vehicleLicenseFaceUrl":"","vin":""}

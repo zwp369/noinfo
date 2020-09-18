@@ -23,8 +23,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @Date: Create in 19:51 2020-09-17
  */
 @Epic("保单管理-场景测试")
-@Feature("场景测试01")
-public class Scene01Test {
+@Feature("场景测试02：新建交商同保-保单录入-制单错误「保存并提交」-保单录入-批改交强险-退保商业险")
+public class Scene02Test {
 
     ResourceBundle bundle = ResourceBundle.getBundle("Interface/ListInterface");
     String orderCreatePath = bundle.getString("orderCreatePath");
@@ -55,16 +55,14 @@ public class Scene01Test {
         policyNos = "BDHAs" + TimeStamp;
         vin = "CHJA" + TimeStamp;
 
-
-
     }
 
     /**
-     * 推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-批改商业险-退保交强险
+     * 推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-保单录入-批改交强险-退保商业险
      */
 
     @Test
-    @Description("推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-批改商业险-退保交强险")
+    @Description("推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-保单录入-批改交强险-退保商业险")
     @DisplayName("Step1： 创建交商同保的保单")
     @Order(1)
     void Step1() {
@@ -82,7 +80,6 @@ public class Scene01Test {
 
         Response OrderResponse = OrderManagementApi.CreateOrder(body, orderCreatePath);
         orderId = OrderResponse.path("data.orderId");
-        System.out.println("看看获取到orderID没有，"+orderId);
         data.put("policyNo", policyNos);
         data.put("riskType", 2);
         String bodys = FakerUtils.template("muti/Createorder.json", data);
@@ -92,14 +89,13 @@ public class Scene01Test {
     }
 
     @Test
-    @Description("推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-批改商业险-退保交强险")
+    @Description("推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-保单录入-批改交强险-退保商业险")
     @DisplayName("Step2： 在保单录入中，将保单推送到CRM")
     @Order(2)
     void Step2() {
         //通过orderid查询orderNo和proposalNo
         HashMap<String, Object> getData = new HashMap<String, Object>();
         getData.put("orderId",orderId);
-        System.out.println("Step2:看看获取到orderID没有，"+orderId);
         Response OrderInfoResponse = OrderManagementApi.CreateOrder(getData, orderGetInfoPath);
         String orderNo = OrderInfoResponse.path("data.orderNo");
         String proposalNo = OrderInfoResponse.path("data.proposalNo");
@@ -123,7 +119,7 @@ public class Scene01Test {
     }
 
     @Test
-    @Description("推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-批改商业险-退保交强险")
+    @Description("推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-保单录入-批改交强险-退保商业险")
     @DisplayName("Step3： 在保单调整中，修改保单的信息，修改安保模式，从新装修改成为非安保模式")
     @Order(3)
     void Step3() {
@@ -160,10 +156,42 @@ public class Scene01Test {
 
 
     @Test
-    @Description("推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-批改商业险-退保交强险")
-    @DisplayName("Step4： 在保单调整中，批改商业险，并通过详情查看验证记录和类型是否批改正确")
+    @Description("推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-保单录入-批改交强险-退保商业险")
+    @DisplayName("Step4： 在保单录入中，将保单推送到CRM")
     @Order(4)
     void Step4() {
+        //通过orderid查询orderNo和proposalNo
+        HashMap<String, Object> getData = new HashMap<String, Object>();
+        getData.put("orderId",orderId);
+        Response OrderInfoResponse = OrderManagementApi.CreateOrder(getData, orderGetInfoPath);
+        String orderNo = OrderInfoResponse.path("data.orderNo");
+        String proposalNo = OrderInfoResponse.path("data.proposalNo");
+        // 组装数据，推送CRM
+        HashMap<String, Object> CRMData = new HashMap<String, Object>();
+        CRMData.put("inputTime", inputTime);
+        CRMData.put("policyNos", policyNos);
+        CRMData.put("policyNoj", policyNoj);
+        CRMData.put("orderId", orderId);
+        CRMData.put("orderNo", orderNo);
+        CRMData.put("proposalNo", proposalNo);
+        CRMData.put("securityMode", 100);
+        CRMData.put("devicePackageType", 0);
+        String CRMBody = FakerUtils.template("muti/PushToCRM.json", CRMData);
+
+
+        Response pushRespone = OrderManagementApi.OrderCrmCommit(CRMBody, orderCrmCommitPath);
+        assertEquals(orderId, pushRespone.path("data.orderId").toString());
+
+
+    }
+
+
+
+    @Test
+    @Description("推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-保单录入-批改交强险-退保商业险")
+    @DisplayName("Step5： 在保单调整中，批改商业险，并通过详情查看验证记录和类型是否批改正确")
+    @Order(5)
+    void Step5() {
         // 准备批改的数据
         HashMap<String, Object> modifyData = new HashMap<String, Object>();
         modifyData.put("orderId", orderId);
@@ -172,7 +200,7 @@ public class Scene01Test {
         modifyData.put("policyNo", policyNos);
         modifyData.put("correctType", 1);
         modifyData.put("correctNo", TimeStamp);
-        modifyData.put("riskType", 2);
+        modifyData.put("riskType", 1);
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json", modifyData);
         Response modifyResponse = OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
         String correctId = modifyResponse.path("data.correctId");
@@ -194,10 +222,10 @@ public class Scene01Test {
     }
 
     @Test
-    @Description("推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-批改商业险-退保交强险")
-    @DisplayName("Step5： 在保单调整中，退保交强险")
-    @Order(5)
-    void Step5() {
+    @Description("推送过的数据场景测试，新建交商同保-保单录入-制单错误「保存并提交」-保单录入-批改交强险-退保商业险")
+    @DisplayName("Step6： 在保单调整中，退保交强险")
+    @Order(6)
+    void Step6() {
         // 准备批改的数据
         HashMap<String, Object> modifyData = new HashMap<String, Object>();
         modifyData.put("orderId", orderId);
@@ -205,7 +233,7 @@ public class Scene01Test {
         modifyData.put("correctDate", inputTime);
         //modifyData.put("policyNo",policyNos);
         modifyData.put("correctType", 2);
-        modifyData.put("riskType", 1);
+        modifyData.put("riskType", 2);
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json", modifyData);
         Response modifyResponse = OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
         FakerUtils.veriyData(modifyResponse);

@@ -30,12 +30,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Feature("客户名单管理")
 public class CustomerListTest {
     private static final Logger log = org.slf4j.LoggerFactory.getLogger(com.g7s.ics.testcase.ListManagement.CustomerListTest.class);
+
     ResourceBundle bundle =ResourceBundle.getBundle("Interface/ListInterface");
     String createCustomerPaht = bundle.getString("createCustomerPaht");
     String updateCustomerPaht = bundle.getString("updateCustomerPaht");
     String detailCustomerPaht = bundle.getString("detailCustomerPaht");
     String pagingCustomerPaht = bundle.getString("pagingCustomerPaht");
-
     String name ="名称"+ FakerUtils.getTimeStamp();
 
     @AfterAll
@@ -160,6 +160,7 @@ public class CustomerListTest {
     }
     @Test
     @Tags({@Tag("Hafl"),@Tag("Smoke")})
+    @Tag("a")
     @Description("调用接口：/v1/blacklist/customer/paging，查询所有的客户数据")
     @DisplayName("验证所有数据的查询，每页20条数据")
     public void pagingAllCustomer(){
@@ -170,6 +171,7 @@ public class CustomerListTest {
         pageDate.put("type",0);
 
         Response pagingResponse = ListManagementApi.pagingCustomer(pageDate,pagingCustomerPaht);
+
         assertAll(
                 //()->assertEquals(pageDate.get("type"),pagingResponse.path("data.records.type[0]")),
                 ()->assertEquals(pageDate.get("current"),pagingResponse.path("data.current")),

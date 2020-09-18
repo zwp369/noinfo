@@ -4,6 +4,9 @@ package com.g7s.ics.suite;
 import com.g7s.ics.testcase.ListManagement.CustomerListTest;
 import com.g7s.ics.testcase.ListManagement.LogTest;
 import com.g7s.ics.testcase.ListManagement.VechicleListTest;
+import com.g7s.ics.testcase.OrderManagement.OrderBuLuTest;
+import com.g7s.ics.testcase.OrderManagement.OrderPushToCRMTest;
+import com.g7s.ics.testcase.OrderManagement.OrdermodifyTest;
 import com.g7s.ics.testcase.ReportDayFinance.ReportDayFinanceTest;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.platform.suite.api.IncludeTags;
@@ -24,7 +27,11 @@ import org.junit.runner.RunWith;
         LogTest.class,
         CustomerListTest.class,
         VechicleListTest.class,
-        ReportDayFinanceTest.class
+        ReportDayFinanceTest.class,
+        OrderBuLuTest.class,
+        OrdermodifyTest.class,
+        OrderPushToCRMTest.class
+
 
 })
 

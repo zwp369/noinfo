@@ -1,7 +1,64 @@
 {
-  "name": "muti",
-  "version": "1.0.0",
-  "dependencies": {
-    
-  }
+  "applyCustomerId": "1291208610961023479",
+  "belongCityCode": "610100",
+  "belongProvinceCode": "610000",
+  "bizChannelName": "其它渠道",
+  "book":  {
+    "bookDatetime": "2020-09-08 19:29:01",
+    "bookId": "2872114893144854150",
+    "cityCode": "150500",
+    "cityName": "通辽市",
+    "contactPerson": "联系人",
+    "countyCode": "150523",
+    "countyName": "开鲁县",
+    "detailAddress": "测试详细地址",
+    "fullAddress": "内蒙古自治区通辽市开鲁县测试详细地址",
+    "phone": "13551241724",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区"
+  },
+  "channelId": "1300450144734900518",
+  "companyCode": "BOCI",
+  "commercial": {
+    "insuranceCommission": 0,
+    "insuranceCommissionProportion": 0,
+    "saleCommission": 10,
+    "saleCommissionProportion": 0.1222,
+    "premium": 300,
+    "policyNo": "{{policyNos}}"
+  },
+  "compulsory": {
+    "insuranceCommission": 0,
+    "insuranceCommissionProportion": 0,
+    "saleCommission": 10,
+    "saleCommissionProportion": 0.1222,
+    "premium": 300,
+    "policyNo": "{{policyNoj}}"
+  },
+  "departmentId": "B.002.008",
+  "departmentName": "区域经营事业部-西南区域经营中心",
+  "devicePackageType":"{{devicePackageType}}",
+  "inputTime": "{{inputTime}}",
+  "message": "",
+  "orderId": "{{orderId}}",
+  "orderNo": "{{orderNo}}",
+  "plateNo": "川A1222",
+  "proposalNo": "{{proposalNo}}",
+  "saleBizMode": 1,
+  "saleCommission": 24,
+  "saleId": "6090",
+  "saleName": "陈中英(都别动！谢谢！)",
+  "securityMode":"{{securityMode}}",
+  "sumSubsidy": 4,
+  "channel": {
+    "channelId": "1300450144734900518",
+    "name": "xzz",
+    "type": 6,
+    "typeTitle": "其它渠道",
+    "vehicleAmount": 500
+  },
+  "commercialSaleCommission": 10,
+  "commercialSaleCommissionProportion": 0.1222,
+  "compulsorySaleCommission": 10,
+  "compulsorySaleCommissionProportion": 0.1222
 }

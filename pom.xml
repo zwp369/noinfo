@@ -157,12 +157,19 @@
             <version>6.0.6</version>
         </dependency>
         <dependency>
+<!--            直接将IO流转换成字符串，用在allure生成的log-->
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
         </dependency>
 
+        <dependency>
 
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+
+        </dependency>
 
     </dependencies>
 

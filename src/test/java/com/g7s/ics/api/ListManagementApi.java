@@ -4,8 +4,6 @@ import com.g7s.ics.RequestClasse;
 import com.g7s.ics.utils.FakerUtils;
 import io.restassured.response.Response;
 
-import java.util.HashMap;
-
 
 /**
  * @Author: zhangwenping
@@ -15,22 +13,22 @@ import java.util.HashMap;
 public class ListManagementApi {
 
 // 车辆lits调用
-    public static  Response createVechicle(HashMap data, String basePath){
+    public static  Response createVechicle(Object data, String basePath){
 
         return  RequestClasse.Request(data,FakerUtils.getheader(),FakerUtils.getQueryParams(basePath), FakerUtils.getbasehost(basePath));
 
 
     }
-    public static  Response updateVechicle(HashMap data, String basePath){
+    public static  Response updateVechicle(Object data, String basePath){
         return  RequestClasse.Request(data,FakerUtils.getheader(),FakerUtils.getQueryParams(basePath),FakerUtils.getbasehost(basePath));
 
 
     }
-    public static  Response detailVechicle(HashMap data, String basePath){
+    public static  Response detailVechicle(Object data, String basePath){
         return  RequestClasse.Request(data,FakerUtils.getheader(),FakerUtils.getQueryParams(basePath),FakerUtils.getbasehost(basePath));
 
     }
-    public static  Response pagingVechicle(HashMap data, String basePath){
+    public static  Response pagingVechicle(Object data, String basePath){
         return  RequestClasse.Request(data,FakerUtils.getheader(),FakerUtils.getQueryParams(basePath),FakerUtils.getbasehost(basePath));
 
     }
@@ -42,22 +40,22 @@ public class ListManagementApi {
      * @return
      */
 
-    public static  Response createCustomer(HashMap data, String basePath){
+    public static  Response createCustomer(Object data, String basePath){
 
         return  RequestClasse.Request(data,FakerUtils.getheader(), FakerUtils.getQueryParams(basePath),FakerUtils.getbasehost(basePath));
 
 
     }
-    public static  Response updateCustomer(HashMap data, String basePath){
+    public static  Response updateCustomer(Object data, String basePath){
         return  RequestClasse.Request(data,FakerUtils.getheader(),FakerUtils.getQueryParams(basePath),FakerUtils.getbasehost(basePath));
 
 
     }
-    public static  Response detailCustomer(HashMap data, String basePath){
+    public static  Response detailCustomer(Object data, String basePath){
         return  RequestClasse.Request(data,FakerUtils.getheader(),FakerUtils.getQueryParams(basePath),FakerUtils.getbasehost(basePath));
 
     }
-    public static  Response pagingCustomer(HashMap data, String basePath) {
+    public static  Response pagingCustomer(Object data, String basePath) {
         return RequestClasse.Request(data, FakerUtils.getheader(), FakerUtils.getQueryParams(basePath),FakerUtils.getbasehost(basePath));
     }
 
@@ -69,7 +67,7 @@ public class ListManagementApi {
      */
 
 
-    public static  Response getLog(HashMap data, String basePath) {
+    public static  Response getLog(Object data, String basePath) {
 
         return RequestClasse.Request(data, FakerUtils.getheader(),FakerUtils.getQueryParams(basePath),FakerUtils.getbasehost(basePath));
     }

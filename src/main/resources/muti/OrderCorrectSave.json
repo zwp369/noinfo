@@ -1,7 +1,27 @@
 {
-  "name": "muti",
-  "version": "1.0.0",
-  "dependencies": {
-    
-  }
+  "orderId": "{{orderId}}",
+  "applyCustomer": "",
+  "applyCustomerId": "",
+  "companyCode": "BOCI",
+  "companyCrmId": "P202007090003",
+  "companyBranchId": "P202008200001",
+  "companyBranchName": "中银保险有限公司江西分公司",
+  "correctDate": "{{correctDate}}",
+  "correctNo": "{{correctNo}}",
+  "correctType": "{{correctType}}",
+  "endDate": "2020-09-17 19:53:59",
+  "inputTime": "2020-09-17",
+  "insuredCustomer": "",
+  "insuredCustomerId": "",
+  "ownerCustomer": "",
+  "ownerCustomerId": "",
+  "plateNo": "ddd",
+  "policyNo": "{{policyNo}}",
+  "riskType": "{{riskType}}",
+  "startDate": "2020-09-17 19:53:57",
+  "sumPremiumIncrement": "12",
+  "vin": "{{vin}}",
+  "companyName": "中银",
+  "belongCityCode": "",
+  "belongProvinceCode": ""
 }

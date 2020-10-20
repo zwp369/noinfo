@@ -65,6 +65,7 @@ public class OrderPushToCRMTest {
         data.put("riskType",2);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
         //创建单商业险保单
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -87,6 +88,7 @@ public class OrderPushToCRMTest {
         CRMData.put("proposalNo",proposalNo);
         CRMData.put("securityMode",110);
         CRMData.put("devicePackageType",1);
+        CRMData.put("deviceDeduct",1);
         String CRMBody = FakerUtils.template("muti/PushToCRM.json",CRMData);
 
 
@@ -110,6 +112,7 @@ public class OrderPushToCRMTest {
         data.put("riskType",1);
         data.put("securityMode",100);
         data.put("devicePackage",0);
+        data.put("deviceDeduct",0);
         String body = FakerUtils.template("muti/Createorder.json",data);
         //创建单险保单
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -132,6 +135,7 @@ public class OrderPushToCRMTest {
         CRMData.put("proposalNo",proposalNo);
         CRMData.put("securityMode",100);
         CRMData.put("devicePackageType",0);
+        CRMData.put("deviceDeduct",0);
         String CRMBody = FakerUtils.template("muti/PushToCRM.json",CRMData);
 
         Response pushRespone= OrderManagementApi.OrderCrmCommit(CRMBody, orderCrmCommitPath);
@@ -156,6 +160,7 @@ public class OrderPushToCRMTest {
         data.put("riskType",1);
         data.put("securityMode",100);
         data.put("devicePackage",0);
+        data.put("deviceDeduct",0);
         String bodyj = FakerUtils.template("muti/Createorder.json",data);
 
         Response responseDataj= OrderManagementApi.CreateOrder(bodyj, orderCreatePath);
@@ -184,6 +189,7 @@ public class OrderPushToCRMTest {
         CRMData.put("proposalNo",proposalNo);
         CRMData.put("securityMode",100);
         CRMData.put("devicePackageType",0);
+        CRMData.put("deviceDeduct",0);
         String CRMBody = FakerUtils.template("muti/PushToCRM.json",CRMData);
 
 

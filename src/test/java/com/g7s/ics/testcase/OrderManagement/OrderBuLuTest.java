@@ -62,6 +62,7 @@ public class OrderBuLuTest {
         data.put("riskType",2);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
 
         Response responseData= OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -86,6 +87,7 @@ public class OrderBuLuTest {
         data.put("riskType",1);
         data.put("securityMode",100);
         data.put("devicePackage",0);
+        data.put("deviceDeduct",0);
         String body = FakerUtils.template("muti/Createorder.json",data);
         Response responseData= OrderManagementApi.CreateOrder(body, orderCreatePath);
         FakerUtils.veriyData(responseData);
@@ -109,6 +111,7 @@ public class OrderBuLuTest {
         data.put("riskType",1);
         data.put("securityMode",100);
         data.put("devicePackage",0);
+        data.put("deviceDeduct",0);
         String bodyj = FakerUtils.template("muti/Createorder.json",data);
         Response responseDataj= OrderManagementApi.CreateOrder(bodyj, orderCreatePath);
         FakerUtils.veriyData(responseDataj);

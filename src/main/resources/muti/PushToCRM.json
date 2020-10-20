@@ -3,6 +3,7 @@
   "belongCityCode": "610100",
   "belongProvinceCode": "610000",
   "bizChannelName": "其它渠道",
+  "deviceDeduct": "{{deviceDeduct}}",
   "book":  {
     "bookDatetime": "2020-09-08 19:29:01",
     "bookId": "2872114893144854150",

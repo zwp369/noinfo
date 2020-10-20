@@ -23,5 +23,6 @@
   "vin": "{{vin}}",
   "companyName": "中银",
   "belongCityCode": "",
+  "deviceDeduct": "{{deviceDeduct}}",
   "belongProvinceCode": ""
 }

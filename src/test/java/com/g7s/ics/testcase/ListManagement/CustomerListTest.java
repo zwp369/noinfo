@@ -103,7 +103,6 @@ public class CustomerListTest {
                 ()->assertEquals(updateData.get("name"),updateResponse.path("data.name")),
                 ()->assertEquals(updateData.get("type"),updateResponse.path("data.type"))
 
-
         );
 
 

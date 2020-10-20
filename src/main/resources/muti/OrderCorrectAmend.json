@@ -42,5 +42,6 @@
   "belongCityCode": "610100",
   "bookProvinceCode": "150000",
   "bookCityCode": "150500",
+  "deviceDeduct": "{{deviceDeduct}}",
   "bookCountyCode": "150523"
 }

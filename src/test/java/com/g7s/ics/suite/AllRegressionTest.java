@@ -18,9 +18,7 @@ import org.junit.runner.RunWith;
         "com.g7s.ics.testcase.ReportDayFinance",
         "com.g7s.ics.testcase.OrderManagement",
         "com.g7s.ics.testcase.OrderManagementScene",
-
-
-
+        
 
 })
 

@@ -68,6 +68,7 @@ public class OrdermodifyTest {
         data.put("riskType",2);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
 
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -81,6 +82,8 @@ public class OrdermodifyTest {
         modifyData.put("securityMode",100);
         modifyData.put("devicePackageType",0);
         modifyData.put("saveType","save");
+        modifyData.put("deviceDeduct",0);
+
 
 
         String modifyBody = FakerUtils.template("muti/OrderCorrectAmend.json",modifyData);
@@ -120,6 +123,7 @@ public class OrdermodifyTest {
         data.put("riskType",2);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
 
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -133,6 +137,8 @@ public class OrdermodifyTest {
         modifyData.put("securityMode",100);
         modifyData.put("devicePackageType",0);
         modifyData.put("saveType","reEntry");
+        modifyData.put("deviceDeduct",0);
+
 
 
         String modifyBody = FakerUtils.template("muti/OrderCorrectAmend.json",modifyData);
@@ -169,6 +175,7 @@ public class OrdermodifyTest {
         data.put("riskType",1);
         data.put("securityMode",100);
         data.put("devicePackage",0);
+        data.put("deviceDeduct",0);
         String body = FakerUtils.template("muti/Createorder.json",data);
 
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -183,6 +190,7 @@ public class OrdermodifyTest {
         modifyData.put("securityMode",100);
         modifyData.put("devicePackageType",0);
         modifyData.put("saveType","save");
+        modifyData.put("deviceDeduct",0);
 
 
         String modifyBody = FakerUtils.template("muti/OrderCorrectAmend.json",modifyData);
@@ -222,6 +230,7 @@ public class OrdermodifyTest {
         data.put("riskType",1);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
 
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -241,6 +250,8 @@ public class OrdermodifyTest {
         modifyData.put("securityMode",100);
         modifyData.put("devicePackageType",0);
         modifyData.put("saveType","reEntry");
+        modifyData.put("deviceDeduct",0);
+
 
 
         String modifyBody = FakerUtils.template("muti/OrderCorrectAmend.json",modifyData);
@@ -283,6 +294,7 @@ public class OrdermodifyTest {
         data.put("riskType",2);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
         String orderId=OrderResponse.path("data.orderId");
@@ -296,6 +308,7 @@ public class OrdermodifyTest {
         modifyData.put("correctType",1);
         modifyData.put("correctNo",TimeStamp);
         modifyData.put("riskType",2);
+        modifyData.put("deviceDeduct",1);
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json",modifyData);
         Response modifyResponse= OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
         String correctId=modifyResponse.path("data.correctId");
@@ -335,6 +348,7 @@ public class OrdermodifyTest {
         data.put("riskType",1);
         data.put("securityMode",100);
         data.put("devicePackage",0);
+        data.put("deviceDeduct",0);
         String body = FakerUtils.template("muti/Createorder.json",data);
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
         String orderId=OrderResponse.path("data.orderId");
@@ -348,6 +362,8 @@ public class OrdermodifyTest {
         modifyData.put("correctType",1);
         modifyData.put("correctNo",TimeStamp);
         modifyData.put("riskType",1);
+        modifyData.put("deviceDeduct",0);
+
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json",modifyData);
         Response modifyResponse= OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
         String correctId=modifyResponse.path("data.correctId");
@@ -386,6 +402,7 @@ public class OrdermodifyTest {
         data.put("riskType",1);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
 
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -404,6 +421,7 @@ public class OrdermodifyTest {
         modifyData.put("correctType",1);
         modifyData.put("correctNo",TimeStamp);
         modifyData.put("riskType",2);
+        modifyData.put("deviceDeduct",1);
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json",modifyData);
         Response modifyResponse= OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
         String correctId=modifyResponse.path("data.correctId");
@@ -441,6 +459,7 @@ public class OrdermodifyTest {
         data.put("riskType",1);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
 
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -459,6 +478,7 @@ public class OrdermodifyTest {
         modifyData.put("correctType",1);
         modifyData.put("correctNo",TimeStamp);
         modifyData.put("riskType",1);
+        modifyData.put("deviceDeduct",1);
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json",modifyData);
         Response modifyResponse= OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
         String correctId=modifyResponse.path("data.correctId");
@@ -483,6 +503,7 @@ public class OrdermodifyTest {
         data.put("riskType",1);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
 
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -501,6 +522,7 @@ public class OrdermodifyTest {
         modifyData.put("correctType",1);
         modifyData.put("correctNo",TimeStamp);
         modifyData.put("riskType",1);
+        modifyData.put("deviceDeduct",1);
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json",modifyData);
         Response modifyResponse= OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
         FakerUtils.veriyData(modifyResponse);
@@ -533,6 +555,7 @@ public class OrdermodifyTest {
         data.put("riskType",2);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
         String orderId=OrderResponse.path("data.orderId");
@@ -546,6 +569,7 @@ public class OrdermodifyTest {
         modifyData.put("correctType",2);
         modifyData.put("correctNo",TimeStamp);
         modifyData.put("riskType",2);
+        modifyData.put("deviceDeduct",1);
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json",modifyData);
         Response modifyResponse= OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
         FakerUtils.veriyData(modifyResponse);
@@ -570,6 +594,7 @@ public class OrdermodifyTest {
         data.put("riskType",1);
         data.put("securityMode",100);
         data.put("devicePackage",0);
+        data.put("deviceDeduct",0);
         String body = FakerUtils.template("muti/Createorder.json",data);
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
         String orderId=OrderResponse.path("data.orderId");
@@ -583,6 +608,7 @@ public class OrdermodifyTest {
         modifyData.put("correctType",2);
         modifyData.put("correctNo",TimeStamp);
         modifyData.put("riskType",1);
+        modifyData.put("deviceDeduct",0);
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json",modifyData);
         Response modifyResponse= OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
         FakerUtils.veriyData(modifyResponse);
@@ -607,6 +633,7 @@ public class OrdermodifyTest {
         data.put("riskType",1);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
         String orderId=OrderResponse.path("data.orderId");
@@ -623,6 +650,7 @@ public class OrdermodifyTest {
         //modifyData.put("policyNo",policyNos);
         modifyData.put("correctType",2);
         modifyData.put("riskType",1);
+        modifyData.put("deviceDeduct",1);
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json",modifyData);
         Response modifyResponse= OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
         modifyData.put("riskType",2);
@@ -649,6 +677,7 @@ public class OrdermodifyTest {
         data.put("riskType",1);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
 
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -666,6 +695,7 @@ public class OrdermodifyTest {
         //modifyData.put("policyNo",policyNos);
         modifyData.put("correctType",2);
         modifyData.put("riskType",1);
+        modifyData.put("deviceDeduct",1);
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json",modifyData);
         Response modifyResponse= OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
 
@@ -687,6 +717,7 @@ public class OrdermodifyTest {
         data.put("riskType",1);
         data.put("securityMode",110);
         data.put("devicePackage",1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json",data);
 
         Response OrderResponse= OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -704,6 +735,7 @@ public class OrdermodifyTest {
         //modifyData.put("policyNo",policyNos);
         modifyData.put("correctType",2);
         modifyData.put("riskType",2);
+        modifyData.put("deviceDeduct",1);
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json",modifyData);
         Response modifyResponse= OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
 

@@ -36,5 +36,6 @@
   "belongCityCode": "610100",
   "companyCrmId":"P202007090003",
   "companyBranchId":"P202008200001",
+  "deviceDeduct": "{{deviceDeduct}}",
   "companyBranchName":""
 }

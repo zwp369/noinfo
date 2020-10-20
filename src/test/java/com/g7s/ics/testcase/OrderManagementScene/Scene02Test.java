@@ -76,6 +76,7 @@ public class Scene02Test {
         data.put("riskType", 1);
         data.put("securityMode", 110);
         data.put("devicePackage", 1);
+        data.put("deviceDeduct",1);
         String body = FakerUtils.template("muti/Createorder.json", data);
 
         Response OrderResponse = OrderManagementApi.CreateOrder(body, orderCreatePath);
@@ -109,6 +110,8 @@ public class Scene02Test {
         CRMData.put("proposalNo", proposalNo);
         CRMData.put("securityMode", 100);
         CRMData.put("devicePackageType", 0);
+        CRMData.put("deviceDeduct", 0);
+
         String CRMBody = FakerUtils.template("muti/PushToCRM.json", CRMData);
 
 
@@ -133,6 +136,8 @@ public class Scene02Test {
         modifyData.put("securityMode", 100);
         modifyData.put("devicePackageType", 0);
         modifyData.put("saveType", "reEntry");
+        modifyData.put("deviceDeduct", 0);
+
 
 
         String modifyBody = FakerUtils.template("muti/OrderCorrectAmend.json", modifyData);
@@ -176,6 +181,8 @@ public class Scene02Test {
         CRMData.put("proposalNo", proposalNo);
         CRMData.put("securityMode", 100);
         CRMData.put("devicePackageType", 0);
+        CRMData.put("deviceDeduct", 0);
+
         String CRMBody = FakerUtils.template("muti/PushToCRM.json", CRMData);
 
 
@@ -201,6 +208,8 @@ public class Scene02Test {
         modifyData.put("correctType", 1);
         modifyData.put("correctNo", TimeStamp);
         modifyData.put("riskType", 1);
+        modifyData.put("deviceDeduct", 0);
+
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json", modifyData);
         Response modifyResponse = OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
         String correctId = modifyResponse.path("data.correctId");
@@ -234,6 +243,8 @@ public class Scene02Test {
         //modifyData.put("policyNo",policyNos);
         modifyData.put("correctType", 2);
         modifyData.put("riskType", 2);
+        modifyData.put("deviceDeduct", 2);
+
         String modifyBody = FakerUtils.template("muti/OrderCorrectSave.json", modifyData);
         Response modifyResponse = OrderManagementApi.CreateOrder(modifyBody, CorrectSavePaht);
         FakerUtils.veriyData(modifyResponse);
